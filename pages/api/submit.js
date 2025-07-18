@@ -7,6 +7,7 @@ export default async function handler(req, res) {
   "http://dlmj9182.github.io",
   "https://dangil-landing.vercel.app",
   "https://g-1-2l7b-5tdwqwky3-insungs-projects-5db2d3a8.vercel.app"   // ← 추가
+  "https://g-1-2l7b.vercel.app"
 ];
   const requestOrigin = req.headers.origin;
   console.log("requestorigin:", requestorigin);
