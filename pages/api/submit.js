@@ -46,10 +46,10 @@ console.log("requestOrigin:", requestOrigin);  // ← 대소문자 일치!
       ];
 
       const body = req.body;
-      const fields = {};
-      for (const key of allowedFields) {
-        if (body[key] !== undefined) fields[key] = body[key];
-      }
+const fields = {};
+for (const key of allowedFields) {
+  if (body.fields && body.fields[key] !== undefined) fields[key] = body.fields[key];
+}
 
       const airtableRes = await fetch(AIRTABLE_API_URL, {
         method: "POST",
