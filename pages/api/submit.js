@@ -23,7 +23,7 @@ console.log("requestOrigin:", requestOrigin);  // ← 대소문자 일치!
 
   // --- 상담신청 맞춤 환경설정 (Base ID/테이블명 하드코딩) ---
   const API_KEY = process.env.AIRTABLE_API_KEY;    // .env에서 관리
-  const BASE_ID = "appcVDsCi9eYi3UNk";             // 상담신청 Base ID
+  const BASE_ID = "appcVDsCi9Vei3UNk";             // 상담신청 Base ID
   const TABLE_NAME = "상담신청";                    // 테이블 이름(띄어쓰기, 대소문자 완전 일치!)
 
   if (!API_KEY || !BASE_ID || !TABLE_NAME) {
