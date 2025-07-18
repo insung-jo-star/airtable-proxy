@@ -46,9 +46,10 @@ console.log("requestOrigin:", requestOrigin);  // ← 대소문자 일치!
       ];
 
       const body = req.body;
+const receivedFields = body.fields || body;
 const fields = {};
 for (const key of allowedFields) {
-  if (body[key] !== undefined) fields[key] = body[key];
+  if (receivedFields[key] !== undefined) fields[key] = receivedFields[key];
 }
       const airtableRes = await fetch(AIRTABLE_API_URL, {
         method: "POST",
@@ -56,9 +57,8 @@ for (const key of allowedFields) {
           Authorization: `Bearer ${API_KEY}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ fields })
-      });
-
+        body: JSON.stringify({ fields })  // 이 부분만 정확히 수정
+});
       const data = await airtableRes.json();
       if (!airtableRes.ok) throw data;
 
