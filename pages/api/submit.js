@@ -3,7 +3,8 @@
 export default async function handler(req, res) {
   // CORS 허용 도메인
   const allowedOrigins = [
-  "https://g-1-2l7b.vercel.app"
+  "https://g-1-f29l.vercel.app",
+  // 필요시 이전 도메인도 같이 넣어둬도 무방
 ];
   const requestOrigin = req.headers.origin;
 console.log("requestOrigin:", requestOrigin);  // ← 대소문자 일치!
