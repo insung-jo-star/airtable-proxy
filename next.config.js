@@ -6,7 +6,7 @@ module.exports = {
         headers: [
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://airtable-proxy-sand.vercel.app/"   // 상담신청 페이지 도메인으로 반드시 바꿔!
+            value: "https://airtable-proxy-sand.vercel.app"   // 상담신청 페이지 도메인으로 반드시 바꿔!
           },
           {
             key: "Access-Control-Allow-Methods",
