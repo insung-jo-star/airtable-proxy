@@ -9,6 +9,8 @@ export default async function handler(req, res) {
   "https://g-1-2l7b-5tdwqwky3-insungs-projects-5db2d3a8.vercel.app"   // ← 추가
 ];
   const requestOrigin = req.headers.origin;
+  console.log("requestorigin:", requestorigin);
+  
   if (allowedOrigins.includes(requestOrigin)) {
     res.setHeader("Access-Control-Allow-Origin", requestOrigin);
   } else {
