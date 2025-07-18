@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   "https://g-1-2l7b.vercel.app"
 ];
   const requestOrigin = req.headers.origin;
-  console.log("requestorigin:", requestorigin);
+console.log("requestOrigin:", requestOrigin);  // ← 대소문자 일치!
   
   if (allowedOrigins.includes(requestOrigin)) {
     res.setHeader("Access-Control-Allow-Origin", requestOrigin);
