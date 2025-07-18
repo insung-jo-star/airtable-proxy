@@ -3,10 +3,11 @@
 export default async function handler(req, res) {
   // CORS 허용 도메인
   const allowedOrigins = [
-    "https://dlmj9182.github.io",
-    "http://dlmj9182.github.io",
-    "https://dangil-landing.vercel.app"
-  ];
+  "https://dlmj9182.github.io",
+  "http://dlmj9182.github.io",
+  "https://dangil-landing.vercel.app",
+  "https://g-1-2l7b-5tdwqwky3-insungs-projects-5db2d3a8.vercel.app"   // ← 추가
+];
   const requestOrigin = req.headers.origin;
   if (allowedOrigins.includes(requestOrigin)) {
     res.setHeader("Access-Control-Allow-Origin", requestOrigin);
